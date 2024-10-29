@@ -3,6 +3,8 @@ import {
   ConverseCommand,
 } from "@aws-sdk/client-bedrock-runtime";
 
+const chat = () => {
+
 const client = new BedrockRuntimeClient({region: "us-west-2"});
 
 const modelId = "meta.llama3-1-8b-instruct-v1:0";
@@ -21,3 +23,6 @@ const response = await client.send(
 
 const responseText = response.output.message.content[0].text;
 console.log(responseText);
+}
+
+export default chat
