@@ -17,7 +17,7 @@ const conversation = [
   },
 ];
 
-const response = await client.send(
+const response = client.send(
   new ConverseCommand({ modelId, messages: conversation }),
 );
 
